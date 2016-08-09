@@ -1,0 +1,31 @@
+inherit kf5
+
+NAME="kf5-gpgmepp"
+VERSION=16.04.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="C++ and Qt5 bindings for libgpgme"
+DESCRIPTION="GpgME++ is a C++ wrapper for the GnuPG project's gpgme library."
+HOMEPAGE="http://www.kde.org/"
+SRC_URI="mirror://kde/stable/applications/${VERSION}/src/gpgmepp-${VERSION}.tar.xz"
+SRC_DIR="gpgmepp-${VERSION}"
+PATCH_URI="16.04.3-exports.patch"
+
+PKG_NAMES="libKF5Gpgmepp5 libKF5Gpgmepp-devel"
+libKF5Gpgmepp5_CONTENTS="
+	usr/bin/cygKF5Gpgmepp-5.dll
+	usr/bin/cygKF5Gpgmepp-pthread-5.dll
+	usr/bin/cygKF5QGpgme-5.dll
+	usr/share/doc/kf5-gpgmepp/
+"
+libKF5Gpgmepp_devel_REQUIRES="libgpg-error-devel libQt5Core-devel"
+libKF5Gpgmepp_devel_CONTENTS="
+	usr/include/KF5/gpgme++/
+	usr/include/KF5/gpgmepp_version.h
+	usr/include/KF5/qgpgme/
+	usr/lib/cmake/KF5Gpgmepp/
+	usr/lib/libKF5Gpgmepp-pthread.dll.a
+	usr/lib/libKF5Gpgmepp.dll.a
+	usr/lib/libKF5QGpgme.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_QGpgme.pri
+"
