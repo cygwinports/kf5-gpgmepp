@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-gpgmepp"
-VERSION=16.04.3
+VERSION=16.08.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="C++ and Qt5 bindings for libgpgme"
