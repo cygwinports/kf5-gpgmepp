@@ -2,7 +2,7 @@ inherit kf5
 
 NAME="kf5-gpgmepp"
 VERSION=16.08.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="C++ and Qt5 bindings for libgpgme"
 DESCRIPTION="GpgME++ is a C++ wrapper for the GnuPG project's gpgme library."
